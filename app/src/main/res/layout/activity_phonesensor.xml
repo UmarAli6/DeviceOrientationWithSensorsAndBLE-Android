@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneSensorActivity">
+
+    <TextView
+        android:id="@+id/device_name_label"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_sensors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/onlyAcc_Label"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/only_acc"
+        app:layout_constraintBottom_toTopOf="@id/gyroAndAcc_Label"
+        app:layout_constraintEnd_toStartOf="@id/onlyAcctextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/device_name_label" />
+
+    <TextView
+        android:id="@+id/onlyAcctextView"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data"
+        app:layout_constraintBottom_toTopOf="@id/gyroAndAcctextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/onlyAcc_Label"
+        app:layout_constraintTop_toBottomOf="@+id/device_name_label" />
+
+    <TextView
+        android:id="@+id/gyroAndAcc_Label"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gyro_and_acc"
+        app:layout_constraintBottom_toTopOf="@+id/record_Button"
+        app:layout_constraintEnd_toStartOf="@id/gyroAndAcctextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onlyAcc_Label" />
+
+    <TextView
+        android:id="@+id/gyroAndAcctextView"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data"
+        app:layout_constraintBottom_toTopOf="@+id/record_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gyroAndAcc_Label"
+        app:layout_constraintTop_toBottomOf="@+id/onlyAcctextView" />
+
+    <Button
+        android:id="@+id/record_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record"
+        app:layout_constraintBottom_toTopOf="@id/timeSelectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/timeSelectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="selectTime"
+        android:text="10 seconds"
+        app:layout_constraintBottom_toTopOf="@id/sensorSelectionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sensorSelectionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="backToSensorSelection"
+        android:text="Back to sensor selection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

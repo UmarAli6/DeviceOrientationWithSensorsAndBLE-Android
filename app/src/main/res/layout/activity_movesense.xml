@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovesenseActivity">
+
+    <TextView
+        android:id="@+id/device_name_TextView"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/info_TextView"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/device_name_TextView" />
+
+    <TextView
+        android:id="@+id/onlyAcc_Label"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/only_acc"
+        app:layout_constraintBottom_toTopOf="@id/gyroAndAcc_Label"
+        app:layout_constraintEnd_toStartOf="@+id/accPitch_TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/device_name_TextView" />
+
+    <TextView
+        android:id="@+id/accPitch_TextView"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data"
+        app:layout_constraintBottom_toTopOf="@id/combPitch_TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/onlyAcc_Label"
+        app:layout_constraintTop_toBottomOf="@id/device_name_TextView" />
+
+    <TextView
+        android:id="@+id/gyroAndAcc_Label"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gyro_and_acc"
+        app:layout_constraintBottom_toTopOf="@id/record_Button"
+        app:layout_constraintEnd_toStartOf="@id/combPitch_TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onlyAcc_Label" />
+
+    <TextView
+        android:id="@+id/combPitch_TextView"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_data"
+        app:layout_constraintBottom_toTopOf="@id/record_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gyroAndAcc_Label"
+        app:layout_constraintTop_toBottomOf="@+id/accPitch_TextView" />
+
+    <Button
+        android:id="@+id/record_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/record"
+        app:layout_constraintBottom_toTopOf="@id/timeSelect_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/timeSelect_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="selectTime"
+        android:text="@string/tenSeconds"
+        app:layout_constraintBottom_toTopOf="@id/sensorSelectionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sensorSelectionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="backToSensorSelection"
+        android:text="@string/back_to_sensor_selection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Movesense</string>
+
+    <string name="format">%1$.1f °</string>
+    <string name="scan_movesense_devices">Scan for Movesense devices</string>
+    <string name="no_devices_found">No devices found</string>
+    <string name="no_device">No device</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="service_not_found">Service not found</string>
+    <string name="notifications_enabled">Notifications enabled</string>
+    <string name="no_data">No data</string>
+    <string name="ble_scan_stopped">BLE scan stopped</string>
+    <string name="oneSecond">1 second</string>
+    <string name="tenSeconds">10 seconds</string>
+    <string name="record">RECORD</string>
+    <string name="Recording">RECORDING</string>
+    <string name="only_acc">Acc Sensor:</string>
+    <string name="gyro_and_acc"><![CDATA[Gyro & Acc:]]></string>
+    <string name="back_to_sensor_selection">Back to sensor selection</string>
+    <string name="phone_sensors">Phone Sensors</string>
+    <string name="phone_sensor">PHONE SENSOR</string>
+    <string name="movesense_sensor">MOVESENSE SENSOR</string>
+    <string name="choose_sensor">Choose sensor</string>
+</resources>
